@@ -190,6 +190,7 @@ cursor: pointer;
 .container2 .buttons {
 	display: flex;
 	flex-direction: column;
+	text-decoration: none;
 }
 .button3  {
 	padding: 15px 20px;
@@ -202,6 +203,7 @@ cursor: pointer;
 	margin: 1em;
 }
 .button3:hover {
+	text-decoration: none;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
 }
 @media (min-width: 417px) and (max-width: 567px) {

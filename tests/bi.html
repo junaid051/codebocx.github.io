@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Changer</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:800|Montserrat:700" rel="stylesheet">
+    <style>
+ h1 {
+	 color: white;
+	 font: 1.5em 'Dosis', sans-serif;
+	 letter-spacing: 1px;
+	 text-align: center;
+}
+ @media (min-width: 417px) and (max-width: 567px) {
+	 h1 {
+		 font-size: 2em;
+	}
+}
+ @media (min-width: 568px) {
+	 h1 {
+		 font-size: 3em;
+	}
+}
+ .container {
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: center;
+}
+ .container .buttons {
+	 display: flex;
+	 flex-direction: column;
+}
+ .container a {
+	 padding: 15px 20px;
+	 font: 13px 'Montserrat', sans-serif;
+	 font-weight: 700;
+	 letter-spacing: 2px;
+	 text-transform: uppercase;
+	 text-decoration: none;
+	 text-align: center;
+	 margin: 1em;
+}
+ .container a:hover {
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+ @media (min-width: 417px) and (max-width: 567px) {
+	 .container a {
+		 padding: 15px 30px;
+		 font: 16px 'Montserrat', sans-serif;
+	}
+}
+ @media (min-width: 568px) {
+	 .container a {
+		 padding: 15px 50px;
+		 font: 20px 'Montserrat', sans-serif;
+	}
+}
+ .button3 {
+	 color: white;
+	 background: linear-gradient(to right, #8041f2, #3095ed);
+	 border-radius: 8px;
+	 transition: 0.2s ease-in-out;
+}
+ .button3:hover {
+	 border-radius: 30px;
+}
+ 
+    </style>
+</head>
+<body>
+   <!-- Just some simple CSS buttons I created. Feel free to check out my website by clicking on one of them! -->
+
+<!-- Simple CSS Buttons -->
+<h1>Welcome To CodeBocx</h1>
+<div class="container">
+	<div class="buttons">
+		<a href="https://jacoblisic.com" class="button3" target="_blank" rel="noopener">Core-Editor</a>
+        <a href="https://jacoblisic.com" class="button3" target="_blank" rel="noopener">Img Cloud</a>
+	</div>
+</div>
+</body>
+</html>

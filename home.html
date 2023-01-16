@@ -1,0 +1,124 @@
+<div class="sec" style="background-image: url(images/sky.jpg)">
+
+	<img src="trnslog.png" alt="white-bg" class="center">
+	
+	<h1 class="hcls">Welcome To CodeBocx</h1>
+	<div class="container2">
+		<div class="buttons">
+			<a href="tests/Editor-6.2/index.html" class="button3" target="_blank" rel="noopener">Core-Editor</a>
+			<a href="https://jacoblisic.com" class="button3" target="_blank" rel="noopener">Img Cloud</a>
+		</div>
+	</div>
+	
+	</div>
+	<!-- <img src="images/bgr.jpg" alt="bar-bg" style="width: 100%;
+	  height: auto;"> -->
+	   
+		<div class="sec" id="content">
+			<h2>Welcome to Code Bocx</h2>
+			<p>"Welcome to CodeEase, your one-stop destination for all your coding needs. We understand that coding can be a complex and time-consuming task, which is why we have created a comprehensive platform that offers a variety of free tools to help you increase your productivity and streamline your coding process.</p>
+			<p>Our website features a wide range of tools, including code editors, debugging tools, project management tools, and more. Whether you're a beginner or an experienced developer, you'll find the tools you need to make your coding experience more efficient and effective.</p>
+			<p>Our code editors are designed to help you write and edit code quickly and easily, with features like code highlighting, auto-completion, and error checking. Our debugging tools allow you to identify and fix errors in your code, while our project management tools help you keep track of your progress and stay organized.</p>
+			<p>In addition to our tools, we also offer a community forum where you can connect with other developers, share knowledge and tips, and get support when you need it.
+			<p>With CodeEase, you'll be able to work smarter, not harder, and achieve more in less time. Start exploring our tools today and experience the difference for yourself!"</p>
+			<br>
+			<h4 style="background-color: red;">You can browse our tools in the nav menu above</h4>
+		</div>  
+		  <!-- Site footer -->
+	
+		  <script src="main.js"></script>
+		  <!-- for setting content for each elem in nav -->
+		  <script>
+			 $(document).ready(function() {
+			  // Add click event listener to link1
+			  $("#home").on("click", function(event) {
+				  event.preventDefault(); // prevent the default behavior of the link
+				  $("#content").load("home.html"); // load file1.html into the "content" div
+			  });
+		  
+			  // Add click event listener to link2
+			  $("#about").on("click", function(event) {
+				  event.preventDefault(); // prevent the default behavior of the link
+				  $("#content").load("about.html");
+			  });
+		  
+			  $("#tools").on("click", function(event) {
+				  event.preventDefault(); // prevent the default behavior of the link
+				  $("#content").load("tools.html");
+				 
+			  });
+		  
+			  $("#contact").on("click", function(event) {
+				  event.preventDefault(); // prevent the default behavior of the link
+				  $("#content").load("contact.html");
+			  });
+		  });
+		  
+				  </script>
+				  <!-- for setting each element in nav active -->
+				  <script>
+		  // Get all the elements
+		  var elem1 = document.getElementById("home");
+		  var elem2 = document.getElementById("about");
+		  var elem3 = document.getElementById("tools");
+		  var elem4 = document.getElementById("contact");
+		  
+		  // Add a click event listener to each element
+		  elem1.addEventListener("click", function() { changeClass("elem1"); });
+		  elem2.addEventListener("click", function() { changeClass("elem2"); });
+		  elem3.addEventListener("click", function() { changeClass("elem3"); });
+		  elem4.addEventListener("click", function() { changeClass("elem4"); });
+		  
+		  function changeClass(clickedElem) {
+			switch(clickedElem) {
+			  case "elem1":
+				elem1.classList.add("active");
+				elem2.classList.remove("active");
+				elem3.classList.remove("active");
+				elem4.classList.remove("active");
+				break;
+			  case "elem2":
+				elem1.classList.remove("active");
+				elem2.classList.add("active");
+				elem3.classList.remove("active");
+				elem4.classList.remove("active");
+				break;
+			  case "elem3":
+				elem1.classList.remove("active");
+				elem2.classList.remove("active");
+				elem3.classList.add("active");
+				elem4.classList.remove("active");
+				break;
+			  case "elem4":
+				elem1.classList.remove("active");
+				elem2.classList.remove("active");
+				elem3.classList.remove("active");
+				elem4.classList.add("active");
+				break;
+			}
+		  }
+		  
+		  
+				  </script>
+				  
+				  <!-- for making scroll down -->
+				  <script>
+		  // Get the div you want to scroll to
+		  const div = document.querySelector('#whole');
+		  
+		  // An array of ids of the elements you want to attach the scroll event to
+		  const elementIds = ['home', 'about', 'tools', 'contact'];
+		  
+		  // Iterate through the array of element ids
+		  elementIds.forEach((id) => {
+			  // Get the element by id
+			  const element = document.getElementById(id);
+			  // Add an event listener to the element that listens for a click
+			  element.addEventListener('click', function() {
+				  // When the element is clicked, scroll to the div
+				  div.scrollIntoView({ behavior: 'smooth' });
+			  });
+		  });
+		  
+		  
+				  </script>

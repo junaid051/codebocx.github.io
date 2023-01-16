@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codebocx</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="footer.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:800|Montserrat:700" rel="stylesheet">
+    <link rel="stylesheet" href="load.css">
+    
+
+    <style>
+        #loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* initially set to none */
+}
+    </style>
+
+</head>
+<body id="overlay">
+    <header id="header">
+	<a href="#" class="logo">CODE BOCX</a>
+	<svg id="menu" width="30px" height="37px" viewBox="0 -3 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+        <defs>
+    
+    </defs>
+        <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Vivid-Icons" transform="translate(-436.000000, -571.000000)">
+                <g id="Icons" transform="translate(37.000000, 169.000000)">
+                    <g id="menu" transform="translate(390.000000, 390.000000)">
+                        <g transform="translate(9.000000, 12.000000)" id="Shape">
+                            <path d="M0,0 L30,0 L30,4 L0,4 L0,0 Z M0,10 L30,10 L30,14 L0,14 L0,10 Z M0,20 L30,20 L30,24 L0,24 L0,20 Z" fill="#FF6E6E">
+    
+    </path>
+                            <path d="M0,0 L4,0 L4,4 L0,4 L0,0 Z M0,10 L4,10 L4,14 L0,14 L0,10 Z M0,20 L4,20 L4,24 L0,24 L0,20 Z M26,0 L30,0 L30,4 L26,4 L26,0 Z M26,10 L30,10 L30,14 L26,14 L26,10 Z M26,20 L30,20 L30,24 L26,24 L26,20 Z" fill="#0C0058">
+    
+    </path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+	<ul class="navigation">
+		<li><a id="home" href="#" class="active">Home</a></li>
+		<li><a id="about" href="#">About</a></li>
+		<li><a id="tools" href="#">Tools</a></li>
+		<li><a id="contact" href="#">Contact</a></li>
+	</ul>
+</header>
+<div id="whole">
+<div class="sec" style="background-image: url(images/sky.jpg)">
+
+<img src="trnslog.png" alt="white-bg" class="center">
+
+<h1 class="hcls">Welcome To CodeBocx</h1>
+<div class="container2">
+	<div class="buttons">
+		<a href="tests/Editor-6.2/index.html" class="button3" target="_blank" rel="noopener">Core-Editor</a>
+        <a href="https://jacoblisic.com" class="button3" target="_blank" rel="noopener">Img Cloud</a>
+	</div>
+</div>
+
+</div>
+<!-- <img src="images/bgr.jpg" alt="bar-bg" style="width: 100%;
+  height: auto;"> -->
+   
+    <div class="sec" id="content">
+        <h2>Welcome to Code Bocx</h2>
+        <p>"Welcome to CodeEase, your one-stop destination for all your coding needs. We understand that coding can be a complex and time-consuming task, which is why we have created a comprehensive platform that offers a variety of free tools to help you increase your productivity and streamline your coding process.</p>
+        <p>Our website features a wide range of tools, including code editors, debugging tools, project management tools, and more. Whether you're a beginner or an experienced developer, you'll find the tools you need to make your coding experience more efficient and effective.</p>
+        <p>Our code editors are designed to help you write and edit code quickly and easily, with features like code highlighting, auto-completion, and error checking. Our debugging tools allow you to identify and fix errors in your code, while our project management tools help you keep track of your progress and stay organized.</p>
+        <p>In addition to our tools, we also offer a community forum where you can connect with other developers, share knowledge and tips, and get support when you need it.
+        <p>With CodeEase, you'll be able to work smarter, not harder, and achieve more in less time. Start exploring our tools today and experience the difference for yourself!"</p>
+        <br>
+        <h4 style="background-color: red;">You can browse our tools in the nav menu above</h4>
+    </div>  
+      
+
+      <script src="main.js"></script>
+      <!-- for setting content for each elem in nav -->
+      <script>
+         $(document).ready(function() {
+          // Add click event listener to link1
+          $("#home").on("click", function(event) {
+              event.preventDefault(); // prevent the default behavior of the link
+              $("#content").load("home.html"); // load file1.html into the "content" div
+          });
+      
+          // Add click event listener to link2
+          $("#about").on("click", function(event) {
+              event.preventDefault(); // prevent the default behavior of the link
+              $("#content").load("about.html");
+          });
+      
+          $("#tools").on("click", function(event) {
+              event.preventDefault(); // prevent the default behavior of the link
+              $("#content").load("tools.html");
+             
+          });
+      
+          $("#contact").on("click", function(event) {
+              event.preventDefault(); // prevent the default behavior of the link
+              $("#content").load("contact.html");
+          });
+      });
+      
+              </script>
+              <!-- for setting each element in nav active -->
+              <script>
+      // Get all the elements
+      var elem1 = document.getElementById("home");
+      var elem2 = document.getElementById("about");
+      var elem3 = document.getElementById("tools");
+      var elem4 = document.getElementById("contact");
+      
+      // Add a click event listener to each element
+      elem1.addEventListener("click", function() { changeClass("elem1"); });
+      elem2.addEventListener("click", function() { changeClass("elem2"); });
+      elem3.addEventListener("click", function() { changeClass("elem3"); });
+      elem4.addEventListener("click", function() { changeClass("elem4"); });
+      
+      function changeClass(clickedElem) {
+        switch(clickedElem) {
+          case "elem1":
+            elem1.classList.add("active");
+            elem2.classList.remove("active");
+            elem3.classList.remove("active");
+            elem4.classList.remove("active");
+            break;
+          case "elem2":
+            elem1.classList.remove("active");
+            elem2.classList.add("active");
+            elem3.classList.remove("active");
+            elem4.classList.remove("active");
+            break;
+          case "elem3":
+            elem1.classList.remove("active");
+            elem2.classList.remove("active");
+            elem3.classList.add("active");
+            elem4.classList.remove("active");
+            break;
+          case "elem4":
+            elem1.classList.remove("active");
+            elem2.classList.remove("active");
+            elem3.classList.remove("active");
+            elem4.classList.add("active");
+            break;
+        }
+      }
+      
+      
+              </script>
+              
+              <!-- for making scroll down -->
+              <script>
+      // Get the div you want to scroll to
+      const div = document.querySelector('#whole');
+      
+      // An array of ids of the elements you want to attach the scroll event to
+      const elementIds = ['home', 'about', 'tools', 'contact'];
+      
+      // Iterate through the array of element ids
+      elementIds.forEach((id) => {
+          // Get the element by id
+          const element = document.getElementById(id);
+          // Add an event listener to the element that listens for a click
+          element.addEventListener('click', function() {
+              // When the element is clicked, scroll to the div
+              div.scrollIntoView({ behavior: 'smooth' });
+          });
+      });
+      
+      
+              </script>
+</div>
+<!-- Site footer -->
+<footer class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
+      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-gray-200">
+    <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
+      <div class="flex md:flex-no-wrap flex-wrap justify-center md:justify-start">
+        <input class="sm:w-64 w-40 bg-gray-100 rounded sm:mr-4 mr-2 border border-gray-400 focus:outline-none focus:border-indigo-500 text-base py-2 px-4" placeholder="Your email Address" type="text">
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Subscribe</button>
+        <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">
+        </p>
+      </div>
+      <span class="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+  <div class="bg-gray-200">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2023 Code Bocx —
+        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">@cbx</a>
+      </p>
+      <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">All subjects belongs to its respective owners</span>
+    </div>
+  </div>
+</footer>
+<script>
+$(document).ready(function() {
+    // Add click event listener to link1
+    $("#home").on("click", function(event) {
+        event.preventDefault(); // prevent the default behavior of the link
+        $("#whole").load("load.html"); // load file1.html into the "content" div
+        setTimeout(function() {
+            $("#whole").load("home.html");
+        }, 5000); // hide the content after 5 seconds
+    });
+
+    // Add click event listener to link2
+    $("#about").on("click", function(event) {
+        event.preventDefault(); // prevent the default behavior of the link
+        $("#whole").load("load.html");
+        setTimeout(function() {
+            $("#whole").load("about.html");
+        }, 5000); // hide the content after 5 seconds
+    });
+
+    $("#tools").on("click", function(event) {
+        event.preventDefault(); // prevent the default behavior of the link
+        $("#whole").load("load.html");
+        setTimeout(function() {
+            $("#whole").load("tools.html");
+        }, 5000); // hide the content after 5 seconds
+    });
+
+    $("#contact").on("click", function(event) {
+        event.preventDefault(); // prevent the default behavior of the link
+        $("#whole").load("load.html");
+        setTimeout(function() {
+            $("#whole").load("contact.html");
+        }, 5000); // hide the content after 5 seconds
+    });
+});
+
+</script>
+
+</body>
+</html>

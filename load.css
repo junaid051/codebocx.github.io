@@ -24,6 +24,8 @@ body .vertical-centered-box .content {
 }
 body {
     background: #2c2d44;
+    height: 100%;
+    width: auto;
 }
 .loader-circle {
     position: absolute;

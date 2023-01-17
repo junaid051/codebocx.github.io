@@ -274,49 +274,7 @@
     
 
 </div>
- 
-</div>
-
-<script>
-  $(document).ready(function() {
-      // Add click event listener to link1
-      $("#home").on("click", function(event) {
-          event.preventDefault(); // prevent the default behavior of the link
-          $("#full").load("load.html"); // load file1.html into the "content" div
-          setTimeout(function() {
-              $("#full").load("home.html");
-          }, 5000); // hide the content after 5 seconds
-      });
-  
-      // Add click event listener to link2
-      $("#about").on("click", function(event) {
-          event.preventDefault(); // prevent the default behavior of the link
-          $("#full").load("load.html");
-          setTimeout(function() {
-              $("#full").load("about.html");
-          }, 5000); // hide the content after 5 seconds
-      });
-  
-      $("#tools").on("click", function(event) {
-          event.preventDefault(); // prevent the default behavior of the link
-          $("#full").load("load.html");
-          setTimeout(function() {
-              $("#full").load("tools.html");
-          }, 5000); // hide the content after 5 seconds
-      });
-  
-      $("#contact").on("click", function(event) {
-          event.preventDefault(); // prevent the default behavior of the link
-          $("#full").load("load.html");
-          setTimeout(function() {
-              $("#full").load("contact.html");
-          }, 5000); // hide the content after 5 seconds
-      });
-  });
-  
-  </script>
- 
-<!-- Site footer -->
+ <!-- Site footer -->
 <footer class="text-gray-700 body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
@@ -451,6 +409,47 @@
     </div>
   </div>
 </footer>
+</div>
+
+<script>
+  $(document).ready(function() {
+      // Add click event listener to link1
+      $("#home").on("click", function(event) {
+          event.preventDefault(); // prevent the default behavior of the link
+          $("#full").load("load.html"); // load file1.html into the "content" div
+          setTimeout(function() {
+              $("#full").load("home.html");
+          }, 5000); // hide the content after 5 seconds
+      });
+  
+      // Add click event listener to link2
+      $("#about").on("click", function(event) {
+          event.preventDefault(); // prevent the default behavior of the link
+          $("#full").load("load.html");
+          setTimeout(function() {
+              $("#full").load("about.html");
+          }, 5000); // hide the content after 5 seconds
+      });
+  
+      $("#tools").on("click", function(event) {
+          event.preventDefault(); // prevent the default behavior of the link
+          $("#full").load("load.html");
+          setTimeout(function() {
+              $("#full").load("tools.html");
+          }, 5000); // hide the content after 5 seconds
+      });
+  
+      $("#contact").on("click", function(event) {
+          event.preventDefault(); // prevent the default behavior of the link
+          $("#full").load("load.html");
+          setTimeout(function() {
+              $("#full").load("contact.html");
+          }, 5000); // hide the content after 5 seconds
+      });
+  });
+  
+  </script>
+
 <script>
   window.onbeforeunload = function () {
     return "Warning!!, this site is using inload tecnology, refreshing page will lead to lose your current page and data.";
